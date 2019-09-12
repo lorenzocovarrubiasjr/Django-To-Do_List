@@ -1,0 +1,17 @@
+<h1>Hello world!</h1>
+<h2>Welcome to Django To Do!</h2> 
+<h2>{{list.name}}</h2>
+<h3>{{title}}</h3>
+<ul>1. See incomplete items</ul>
+<ul>2. See complete items</ul>
+<ul>3. See all items</ul>
+<ul>4. Create new item</ul>
+<ul>5. Delete item</ul>
+<ul>6. Quit</ul>
+<h3>Please make a choice:</h3>
+<form method="POST" action= "/re/">
+    <input name="choice" id="choice"/>
+    <input type="submit" value="Submit"/>
+    <input type="hidden" name="list_id" value="{{list.id}}"/>
+    {% csrf_token %} 
+</form>

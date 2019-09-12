@@ -1,0 +1,13 @@
+<h1>{{list.name}}</h1>
+
+<h3>Items:</h3>
+
+{%for item in items%}
+    {%if item.done == True%}
+        <li> ✅ {{item.done}} - {{item.content}}</li>
+    {%else%}
+        <li>❌ {{item.done}} - {{item.content}}</li>
+    {%endif%}
+{%endfor%}
+
+
